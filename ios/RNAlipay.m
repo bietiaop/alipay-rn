@@ -1,7 +1,7 @@
 
-#import "RNAlipayRn.h"
+#import "RNAlipay.h"
 
-@implementation RNAlipayRn
+@implementation RNAlipay
 
 - (dispatch_queue_t)methodQueue
 {

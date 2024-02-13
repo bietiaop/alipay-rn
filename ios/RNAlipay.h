@@ -5,7 +5,7 @@
 #import <React/RCTBridgeModule.h>
 #endif
 
-@interface RNAlipayRn : NSObject <RCTBridgeModule>
+@interface RNAlipay : NSObject <RCTBridgeModule>
 
 @end
   

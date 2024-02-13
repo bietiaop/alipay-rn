@@ -17,13 +17,13 @@ public class RNAliPayModule extends ReactContextBaseJavaModule {
 
     private final ReactApplicationContext reactContext;
 
-    public AliPayModule(ReactApplicationContext reactContext) {
+    public RNAliPayModule(ReactApplicationContext reactContext) {
         super(reactContext);
         this.reactContext = reactContext;
     }
     @Override
     public String getName() {
-        return "AliPay";
+        return "RNAlipay";
     }
 
     @ReactMethod

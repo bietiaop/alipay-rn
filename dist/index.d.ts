@@ -4,8 +4,14 @@ export interface AliPayResponseInterface {
     resultStatus: string;
 }
 export interface RNAlipayInterface {
-    setAlipaySandbox(isSandbox: boolean): void;
-    alipay(orderInfo: string): Promise<AliPayResponseInterface>;
+    setSandbox(isSandbox: boolean): void;
+    pay(orderInfo: string): Promise<AliPayResponseInterface>;
 }
-declare const payFunc: RNAlipayInterface;
-export default payFunc;
+export declare const alipayErrorReason: {
+    '6001': string;
+    '6002': string;
+    '4000': string;
+    '5000': string;
+};
+declare const AliPay: RNAlipayInterface;
+export default AliPay;
