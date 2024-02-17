@@ -61,9 +61,9 @@ export interface AliPayResponseInterface {
 
 Explanation of the resultStatus:
 
-`memo`: It is a json string, you can use `JSON.parse` to parse it.
+`memo`: The result message (natural language).
 
-`result`: The result message (natural language).
+`result`: It is a json string, you can use `JSON.parse` to parse it.
 
 `resultStatus`: The code of the result, it is a string, you can use `parseInt` to parse it. You can refer to the official document for the meaning of the status code. `9000` means success. You can also use the following code to get the natural language of the status code (from the Internet).
 
@@ -86,7 +86,7 @@ const pay = async()=>{
     // You can use the following code to get the natural language of the status code
     console.error(alipayErrorReason[error.resultStatus]);
     // Recommend
-    // const errorMessage = error?.result || alipayErrorReason[error.resultStatus] || 'Unknown error'
+    // const errorMessage = error?.memo || alipayErrorReason[error.resultStatus] || 'Unknown error'
     // console.error(errorMessage);
   }
 }
